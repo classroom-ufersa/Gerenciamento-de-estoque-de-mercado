@@ -1,6 +1,6 @@
 # Gerenciamento-de-estoque-de-mercado
 ## Desenvolvedores:
--[Andrews Ferreira de Paiva Silva](https://github.com/TheFonci)
+- [Andrews Ferreira de Paiva Silva](https://github.com/TheFonci)
 - [Michely Vitória Costa Felix](https://github.com/MichelyFelix)
 ## Tópicos
 ## Problemática 
