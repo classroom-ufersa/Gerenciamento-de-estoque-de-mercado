@@ -1,7 +1,7 @@
 # Gerenciamento-de-estoque-de-mercado
 ## Tópicos:
-- [Desenvolvedores](# Desenvolvedores)
-- [Problematica](# Problemática)
+- [Desenvolvedores](#Desenvolvedores)
+- [Problematica](#Problemática)
 ## Desenvolvedores:
 - [Andrews Ferreira de Paiva Silva](https://github.com/TheFonci)
 - [Michely Vitória Costa Felix](https://github.com/MichelyFelix)
