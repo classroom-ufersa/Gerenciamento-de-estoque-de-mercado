@@ -10,7 +10,7 @@
 ## Problemática:
 Este é um projeto de sistema em linguagem `C` para criar e gerenciar um estoque de produtos de um supermercado. O sistema foi desenvolvido com o objetivo de auxiliar na organização, controle e eficiência do estoque de produtos.
 ## Funcionalidades:
-### Adicionar produto;
+## Adicionar produto;
 - Remover produto;
 - Listar produtos cadastrados;
 - Editar produtos;
