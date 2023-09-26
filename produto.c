@@ -24,7 +24,7 @@ scanf("%f",&produto->preco);
 printf("Data de fabricacao (dia mes ano):\n");
 scanf("%hd %hd %d", &produto->data_fabricacao.dia, &produto->data_fabricacao.mes, &produto->data_fabricacao.ano);
 printf("Data de validade (dia mes ano):\n");
-scanf("%hd %hd %d", &produto->data_validade.dia, &produto->data_validade.mes, &produto->data_validade.ano);
+scanf("%hd %hd %d", &produto->data_validade.mes, &produto->data_validade.ano);
 preencher(&produto->departamento);
 printf("Quantidade de estoque:\n");
 scanf("%d",&produto->estoque);
