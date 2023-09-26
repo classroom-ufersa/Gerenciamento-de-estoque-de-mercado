@@ -10,5 +10,6 @@ typedef struct{
 }Departamento;
 
 void capitalizeString(char *str);
+/*Função para preencher os dados do departamento*/
 void preencher(Departamento* departamento);
 
