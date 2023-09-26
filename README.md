@@ -18,8 +18,3 @@ Este é um projeto de sistema em linguagem `C` para criar e gerenciar um estoque
 - Consultar produtos disponíveis em um dado departamento;
 - Consultar quantidade de produtos por departamento;
 - Sair
-## Funções utilizadas: 
-### Função para transformar a primeira letra dos nomes em maiuscula:
-void capitalizeString(char *str);
-### Função que preenche os dados do departamento:
-void preencher(Departamento* departamento);
