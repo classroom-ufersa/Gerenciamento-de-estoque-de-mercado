@@ -21,6 +21,11 @@ printf("Produto");
 scanf(" %[^\n]", departamento->produto);
 capitalizeString(departamento->produto);
 printf("Porte do produto");
-scanf(" %[^\n]", departamento->porte);
+char porte[10];
 
+while(porte != 'Grande' || porte != 'Medio' || porte != 'Pequeno'){
+    scanf(" %[^\n]", departamento->porte);
+    capitalizeString(departamento->porte);
+}
+ 
 }
