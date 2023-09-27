@@ -14,7 +14,19 @@ Data data_fabricacao;
 Data data_validade;
 Departamento departamento;
 int estoque;
+struct produto* prox;
+struct produto* ant;
 }Produto;
+
+typedef struct lista{
+Produto* inicio;
+Produto* fim;
+}Lista;
+
+void inicializa_lista(Lista*lista){
+lista->inicio = NULL;
+lista->fim = NULL;
+}
 
 void preenche_produto(Produto*produto){
 printf("Tipo do produto:\n");
