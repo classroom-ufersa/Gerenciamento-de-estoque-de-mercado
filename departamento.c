@@ -1,10 +1,7 @@
 #include"departamento.h"
 
-<<<<<<< HEAD
 #include"departamento.h"
 
-=======
->>>>>>> 1d9e93972ff8afdfaf071cfdae084c02ede509a2
 void capitalizeString(char *str)
 {
     if (str[0] != '\0')
@@ -17,11 +14,7 @@ void capitalizeString(char *str)
     }
 }
 
-<<<<<<< HEAD
 void preencherDepartamento(Departamento* departamento){
-=======
-void preencher(Departamento* departamento){
->>>>>>> 1d9e93972ff8afdfaf071cfdae084c02ede509a2
 
 printf("Nome do departamento");
 scanf(" %[^\n]", departamento->nome);
@@ -30,7 +23,6 @@ printf("Produto");
 scanf(" %[^\n]", departamento->produto);
 capitalizeString(departamento->produto);
 printf("Porte do produto");
-<<<<<<< HEAD
 scanf(" %[^\n]", departamento->porte);
 
 while(departamento->porte != 'Grande' || departamento->porte != 'Medio' || departamento->porte != 'Pequeno'){
@@ -39,13 +31,3 @@ while(departamento->porte != 'Grande' || departamento->porte != 'Medio' || depar
 }
 }
 
-=======
-char porte[10];
-
-while(porte != 'Grande' || porte != 'Medio' || porte != 'Pequeno'){
-    scanf(" %[^\n]", departamento->porte);
-    capitalizeString(departamento->porte);
-}
- 
-}
->>>>>>> 1d9e93972ff8afdfaf071cfdae084c02ede509a2
