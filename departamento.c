@@ -1,4 +1,3 @@
-#include"departamento.h"
 
 #include"departamento.h"
 
@@ -25,7 +24,8 @@ capitalizeString(departamento->produto);
 printf("Porte do produto");
 scanf(" %[^\n]", departamento->porte);
 
-while(departamento->porte != 'Grande' || departamento->porte != 'Medio' || departamento->porte != 'Pequeno'){
+while(departamento->porte != 'GRANDE' || departamento->porte != 'MEDIO' || departamento->porte != 'PEQUENO'){
+    printf("Informe o porte\n");
     scanf(" %[^\n]", departamento->porte);
     capitalizeString(departamento->porte);
 }
