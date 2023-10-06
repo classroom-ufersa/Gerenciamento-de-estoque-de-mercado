@@ -1,26 +1,4 @@
 #include"produto.h"
-#include"departamento.h"
-
-typedef struct data{
-int dia;
-int mes;
-int ano;
-}Data;
-
-typedef struct produto{
-char tipo[50];
-float preco;
-Data data_fabricacao;
-Data data_validade;
-Departamento departamento;
-int estoque;
-}Produto;
-
-typedef struct listaProduto{
-Produto* info;
-struct lista* prox;
-struct lista* ant;
-}ListaProduto;
 
 ListaProduto* cria_lista(void){
 return NULL;
