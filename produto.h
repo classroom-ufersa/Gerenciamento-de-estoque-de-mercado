@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include"departamento.h"
-/*struct da data*/
+/**struct de data*/
 typedef struct data{
 int dia;
 int mes;
