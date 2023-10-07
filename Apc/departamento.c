@@ -1,5 +1,5 @@
 
-#include"departamento.h"
+#include"C:/Users/andre/Gerenciamento-de-estoque-de-mercado/Include/departamento.h"
 
 void capitalizeString(char *str)
 {
