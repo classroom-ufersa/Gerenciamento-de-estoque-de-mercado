@@ -1,31 +1,34 @@
 #include"produto.h"
-#include"departamento.h"
 
-typedef struct{
-int ano;
-short mes;
-short dia;
-}Data;
+ListaProduto* cria_lista(void){
+return NULL;
+}
 
-typedef struct{
-char tipo[50];
-float preco;
-Data data_fabricacao;
-Data data_validade;
-Departamento departamento;
-int estoque;
-struct produto* prox;
-struct produto* ant;
-}Produto;
+ListaProduto* list_insere(ListaProduto* l, Produto* produto){
+ListaProduto* p = l;
 
-typedef struct lista{
-Produto* inicio;
-Produto* fim;
-}Lista;
+while(p->prox != NULL){
+p = p->prox;
+}
 
-void inicializa_lista(Lista*lista){
-lista->inicio = NULL;
-lista->fim = NULL;
+ListaProduto* novo = (ListaProduto*)malloc(sizeof(ListaProduto));
+if(novo ==  NULL){
+    printf("Erro ao alocar memoria!\n");
+    exit(1);
+}
+
+novo->info = (Produto*)malloc(sizeof(Produto));
+if(novo->info ==  NULL){
+    printf("Erro ao alocar memoria!\n");
+    exit(1);
+}
+
+*novo->info = *produto;
+novo->prox = NULL;
+novo->ant = p;
+
+p->prox = novo;
+return l;
 }
 
 void preenche_produto(Produto*produto){
@@ -34,9 +37,9 @@ scanf(" %[^\n]", produto->tipo);
 printf("Preco:\n");
 scanf("%f",&produto->preco);
 printf("Data de fabricacao (dia mes ano):\n");
-scanf("%hd %hd %d", &produto->data_fabricacao.dia, &produto->data_fabricacao.mes, &produto->data_fabricacao.ano);
+scanf("%d %d %d", produto->data_fabricacao.dia, produto->data_fabricacao.mes,produto->data_fabricacao.ano);
 printf("Data de validade (dia mes ano):\n");
-scanf("%hd %d", &produto->data_validade.mes, &produto->data_validade.ano);
+scanf("%d %d", produto->data_validade.mes,produto->data_validade.ano);
 preencherDepartamento(&produto->departamento);
 printf("Quantidade de estoque:\n");
 scanf("%d",&produto->estoque);

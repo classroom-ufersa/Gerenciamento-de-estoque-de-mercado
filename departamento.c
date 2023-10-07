@@ -1,3 +1,4 @@
+
 #include"departamento.h"
 
 void capitalizeString(char *str)
