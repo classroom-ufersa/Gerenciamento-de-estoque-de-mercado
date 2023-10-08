@@ -1,6 +1,3 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
 #include"departamento.h"
 /**struct de data*/
 typedef struct data{
@@ -26,4 +23,4 @@ struct lista* ant;
 
 ListaProduto* cria_lista;
 ListaProduto* list_insere(ListaProduto* l, Produto* produto);
-void preenche_produto(Produto*produto);
+void preenche_produto(Produto* produto);

@@ -11,5 +11,7 @@ typedef struct{
 }Departamento;
 
 void capitalizeString(char *str);
+/*Libera a memória alocada para o Departamento*/
+void liberarDepartamento(Departamento *departamento);
 /*Função para preencher os dados do departamento*/
 void preencherDepartamento(Departamento* departamento);

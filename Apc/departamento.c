@@ -1,5 +1,5 @@
 
-#include"C:/Users/andre/Gerenciamento-de-estoque-de-mercado/Include/departamento.h"
+#include"produto.c"
 
 void capitalizeString(char *str)
 {
@@ -13,21 +13,40 @@ void capitalizeString(char *str)
     }
 }
 
-void preencherDepartamento(Departamento* departamento){
+Departamento *criarDepartamento() {
+    // Aloca dinamicamente a memória para uma estrutura Departamento
+    Departamento *novoDepartamento = (Departamento *)malloc(sizeof(Departamento));
 
-printf("Nome do departamento");
-scanf(" %[^\n]", departamento->nome);
-capitalizeString(departamento->nome);
-printf("Produto");
-scanf(" %[^\n]", departamento->produto);
-capitalizeString(departamento->produto);
-printf("Porte do produto");
-scanf(" %[^\n]", departamento->porte);
+    // Verifica se a alocação foi bem-sucedida
+    if (novoDepartamento == NULL) {
+        fprintf(stderr, "Erro ao alocar memória!\n");
+        exit(1);
+    }
 
-while(departamento->porte != 'Grande' || departamento->porte != 'Medio' || departamento->porte != 'Pequeno'){
-    printf("informe o porte do produto Ex: -GRANDE, MEDIO ou PEQUENO");    
-    scanf(" %[^\n]", departamento->porte);
-    capitalizeString(departamento->porte);
+    return novoDepartamento;
 }
+
+void liberarDepartamento(Departamento *departamento) {
+    // Libera a memória alocada para o Departamento
+    free(departamento);
+}
+
+void preencherDepartamento(Departamento *departamento) {
+    printf("Nome do departamento: ");
+    scanf(" %[^\n]", departamento->nome);
+    capitalizeString(departamento->nome);
+
+    printf("Produto: ");
+    scanf(" %[^\n]", departamento->produto);
+    capitalizeString(departamento->produto);
+
+    // Loop para verificar as condições corretas
+    while (strcmp(departamento->porte, "GRANDE") != 0 &&
+           strcmp(departamento->porte, "MEDIO") != 0 &&
+           strcmp(departamento->porte, "PEQUENO") != 0) {
+        printf("Informe o porte do produto (GRANDE, MEDIO ou PEQUENO): ");
+        scanf(" %[^\n]", departamento->porte);
+        capitalizeString(departamento->porte);
+    }
 }
 
