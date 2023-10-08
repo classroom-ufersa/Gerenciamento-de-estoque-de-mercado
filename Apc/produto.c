@@ -60,6 +60,7 @@ p->prox = novo;
 return l;
 }*/
 
+<<<<<<< HEAD
 void preenche_produto(Produto* produto){
     printf("Tipo do produto:\n");
     scanf(" %[^\n]", produto->tipo);
@@ -73,6 +74,22 @@ void preenche_produto(Produto* produto){
     preencherDepartamento(&produto->departamento);
     printf("Quantidade de estoque:\n");
     scanf("%d", &produto->estoque);
+=======
+void preenche_produto(void){
+Produto produto;
+printf("Tipo do produto:\n");
+scanf(" %[^\n]", produto.tipo);
+capitalizeString(produto.tipo);
+printf("Preco:\n");
+scanf("%f",&produto.preco);
+printf("Data de fabricacao (dia mes ano):\n");
+scanf("%d %d %d", produto.data_fabricacao.dia, produto.data_fabricacao.mes,produto.data_fabricacao.ano);
+printf("Data de validade (dia mes ano):\n");
+scanf("%d %d", produto.data_validade.mes,produto.data_validade.ano);
+preencherDepartamento(&produto.departamento);
+printf("Quantidade de estoque:\n");
+scanf("%d",&produto.estoque);
+>>>>>>> 19a1ae4f11a6e435394f23f47686a43561ba8cd7
 }
 
 void add_lista_arquivo(ListaProduto* produto){
@@ -95,7 +112,11 @@ void add_lista_arquivo(ListaProduto* produto){
     }
     fclose(arquivo);
     
+<<<<<<< HEAD
     ListaProduto* ordena(ListaProduto* p, Produto produto);{
+=======
+    ListaProduto* ordena(ListaProduto* p, Produto produto){
+>>>>>>> 19a1ae4f11a6e435394f23f47686a43561ba8cd7
         ListaProduto*novo = (ListaProduto*)malloc(sizeof(ListaProduto));
         if(novo == NULL){
             printf("Erro ao alocar memoria!\n");
@@ -103,3 +124,4 @@ void add_lista_arquivo(ListaProduto* produto){
         }
     }
 }
+
