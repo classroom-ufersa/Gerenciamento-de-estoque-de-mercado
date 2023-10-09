@@ -25,4 +25,6 @@ ListaProduto* cria_lista;
 ListaProduto* list_insere(ListaProduto* l, Produto* produto);
 void preenche_produto(void);
 void add_lista_arquivo(ListaProduto* produto);
-ListaProduto* ordena(ListaProduto* p, Produto produto);
+ListaProduto* ordenalista(ListaProduto* p, Produto* produto);
+void imprime_lista(ListaProduto* prod);
+ListaProduto* busca(ListaProduto* prod, char nomeProd[]);
