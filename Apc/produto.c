@@ -152,3 +152,21 @@ ListaProduto* busca(ListaProduto* prod, char nomeProd[]){
    } 
     return NULL;
 }
+
+ListaProduto* retira(ListaProduto*l, char nome_produto[]){
+    ListaProduto* p = busca(l,nome_produto);
+
+    if(p->prox != NULL){//verifica se tem um nó seguinte
+        p->prox->ant = p->ant;
+    }
+    if(l == NULL){//verifica se a lista está vazia
+        return l;
+    }
+    if(p == l){//verifica se o nó a ser retirado é p primeiro da lista
+        l = p->prox;
+    }
+    else{
+        p->ant->prox = p->prox;
+    }
+    return l;
+}
