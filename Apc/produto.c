@@ -60,7 +60,6 @@ p->prox = novo;
 return l;
 }*/
 
-<<<<<<< HEAD
 void preenche_produto(Produto* produto){
     printf("Tipo do produto:\n");
     scanf(" %[^\n]", produto->tipo);
@@ -95,8 +94,6 @@ void add_lista_arquivo(ListaProduto* produto){
     }
     fclose(arquivo);
     
-    ListaProduto* ordena(ListaProduto* p, Produto produto);{
-=======
     ListaProduto* ordena(ListaProduto* p, Produto produto){
         ListaProduto*novo = (ListaProduto*)malloc(sizeof(ListaProduto));
         if(novo == NULL){
