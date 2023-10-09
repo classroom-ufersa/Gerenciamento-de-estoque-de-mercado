@@ -68,9 +68,9 @@ capitalizeString(produto.tipo);
 printf("Preco:\n");
 scanf("%f",&produto.preco);
 printf("Data de fabricacao (dia mes ano):\n");
-scanf("%d %d %d", produto.data_fabricacao.dia, produto.data_fabricacao.mes,produto.data_fabricacao.ano);
+scanf("%d %d %d", &produto.data_fabricacao.dia, &produto.data_fabricacao.mes,&produto.data_fabricacao.ano);
 printf("Data de validade (dia mes ano):\n");
-scanf("%d %d", produto.data_validade.mes,produto.data_validade.ano);
+scanf("%d %d", &produto.data_validade.mes,&produto.data_validade.ano);
 preencherDepartamento(&produto.departamento);
 printf("Quantidade de estoque:\n");
 scanf("%d",&produto.estoque);
@@ -95,7 +95,7 @@ void add_lista_arquivo(ListaProduto* produto){
         novo = novo->prox;
     }
     fclose(arquivo);
-    
+}
     ListaProduto* ordena(ListaProduto* p, Produto produto){
         ListaProduto*novo = (ListaProduto*)malloc(sizeof(ListaProduto));
         if(novo == NULL){
@@ -103,4 +103,3 @@ void add_lista_arquivo(ListaProduto* produto){
             exit(1);
         }
     }
-}
