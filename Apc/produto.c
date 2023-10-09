@@ -81,7 +81,7 @@ scanf("%d",&produto.estoque);
 }
 
 void add_lista_arquivo(ListaProduto* produto){
-  FILE* arquivo = fopen("produtos.txt", "a");
+  FILE* arquivo = fopen("produtos.txt", "w");
   if (arquivo == NULL){
     printf("erro ao criar arquivo!\n");
     exit(1);
@@ -111,7 +111,7 @@ void add_lista_arquivo(ListaProduto* produto){
         ListaProduto* ant = NULL;
         ListaProduto* aux = p;
 
-        while(aux != NULL && aux->info < produto){
+        while(aux != NULL && aux->info->nome < produto->nome){
             ant = aux;
             aux = aux->prox;
         }
