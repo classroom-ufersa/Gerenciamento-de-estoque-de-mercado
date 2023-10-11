@@ -3,11 +3,7 @@
 #include<string.h>
 
 /**struct para os campos do departamento*/
-typedef struct{
-    char nome[20];
-    char produto[20];
-    char porte[8];
-    
+typedef struct departamento{
 }Departamento;
 
 void capitalizeString(char *str);

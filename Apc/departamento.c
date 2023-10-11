@@ -1,5 +1,11 @@
-
 #include"produto.c"
+
+typedef struct departamento{
+    char nome[20];
+    char produto[20];
+    char porte[8];
+    
+}Departamento;
 
 void capitalizeString(char *str)
 {
@@ -49,4 +55,5 @@ void preencherDepartamento(Departamento *departamento) {
         capitalizeString(departamento->porte);
     }
 }
+
 

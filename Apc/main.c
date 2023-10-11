@@ -2,7 +2,7 @@
 
 int main(void)
 {
-ListaProduto* list_insere = Produto;
+ListaProduto* list_insere = produto;
 int opcao;
 
     do {
@@ -23,27 +23,27 @@ int opcao;
         switch (opcao) {
             case 1:
                 printf("Deseja adicionar um novo produto?");
-                preenche_produto(Produto);
+                preenche_produto(produto);
             case 2:
-                remover_produto(Produto);
+                remover_produto(produto);
                 break;
             case 3:
-                listar_produtos(Produto);
+                listar_produtos(produto);
                 break;
             case 4:
-                editar_produto(Produto);
+                editar_produto(produto);
                 break;
             case 5:
-                buscar_produto(Produto);
+                buscar_produto(produto);
                 break;
             case 6:
-                consultar_departamento(Produto);
+                consultar_departamento(produto);
                 break;
             case 7:
-                consultar_quantidade_departamento(Produto);
+                consultar_quantidade_departamento(produto);
                 break;
             case 8:
-                sair(Produto);
+                sair(produto);
                 break;
             default:
                 printf("Opcao invalida. Tente novamente.\n");
