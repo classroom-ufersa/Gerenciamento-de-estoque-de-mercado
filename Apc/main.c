@@ -22,7 +22,7 @@ int opcao;
 
         switch (opcao) {
             case 1:
-                printf("Deseja adicionar um novo produto?")
+                printf("Deseja adicionar um novo produto?");
                 preenche_produto(Produto);
             case 2:
                 remover_produto(Produto);
