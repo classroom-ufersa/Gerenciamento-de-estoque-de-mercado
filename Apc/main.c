@@ -6,8 +6,9 @@ int main(void)
   Produto* produto; 
   Departamento* departamento;
   int contador_produto = 0,estoque;
-  char nome_produto[50],tipo_produto[50],data_fabricacao,data_validade;
+  char nome_produto[50],tipo[50],data_fabricacao[11],data_validade[11];
   float preco;
+  int opBusca;
 //ListaProduto* list_insere = produto;
   int opcao;
 
@@ -28,14 +29,14 @@ int main(void)
 
         switch (opcao) {
             case 1:
-               Produto* novo= (Produto*)malloc(sizeof(Produto));
+               Produto** novo= (Produto**)malloc(sizeof(Produto));
                if(novo == NULL){
                 printf("Erro ao alocar memoria!\n");
                 exit(1);
                }
         printf("Tipo do produto:\n");
-        scanf(" %[^\n]",tipo_produto);
-         capitalizeString(tipo_produto);
+        scanf(" %[^\n]",tipo);
+         capitalizeString(tipo);
         printf("Nome do produto:\n");
         scanf(" %[^\n]", nome_produto);
         capitalizeString(nome_produto);
@@ -48,7 +49,7 @@ int main(void)
         preencherDepartamento(&produto->departamento);
         printf("Quantidade de estoque:\n");
         scanf("%d",&estoque);
-        novo[contador_produto] = cria_prod(tipo_produto,nome_produto,&preco,data_fabricacao,data_validade,departamento,&estoque);
+        novo[contador_produto] = cria_prod(tipo,nome_produto,preco,data_fabricacao,data_validade,departamento,estoque);
         contador_produto++;
             case 2:
                 printf("Informe o nome do produto a ser removido:");
