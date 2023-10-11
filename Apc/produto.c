@@ -63,19 +63,24 @@ return l;
 }
 */
 
-void preenche_produto(Produto* produto){
-    printf("Tipo do produto:\n");
-    scanf(" %[^\n]", produto->tipo);
-    capitalizeString(produto->tipo);
-    printf("Preco:\n");
-    scanf("%f", &produto->preco);
-    printf("Data de fabricacao (dia mes ano):\n");
-    scanf("%d %d %d", &produto->data_fabricacao.dia, &produto->data_fabricacao.mes, &produto->data_fabricacao.ano);
-    printf("Data de validade (mes ano):\n");
-    scanf("%d %d", &produto->data_validade.mes, &produto->data_validade.ano);
-    preencherDepartamento(&produto->departamento);
-    printf("Quantidade de estoque:\n");
-    scanf("%d", &produto->estoque);
+void preenche_produto(void){
+Produto produto;
+printf("Tipo do produto:\n");
+scanf(" %[^\n]", produto.tipo);
+capitalizeString(produto.tipo);
+printf("Nome do produto:\n");
+scanf(" %[^\n]", produto.nome);
+capitalizeString(produto.nome);
+printf("Preco:\n");
+scanf("%f",&produto.preco);
+printf("Data de fabricacao (dia mes ano):\n");
+scanf("%d %d %d", &produto.data_fabricacao.dia, &produto.data_fabricacao.mes,&produto.data_fabricacao.ano);
+printf("Data de validade (dia mes ano):\n");
+scanf("%d %d", &produto.data_validade.mes,&produto.data_validade.ano);
+preencherDepartamento(&produto.departamento);
+printf("Quantidade de estoque:\n");
+scanf("%d",&produto.estoque);
+
 }
 
 void add_lista_arquivo(ListaProduto* produto){
