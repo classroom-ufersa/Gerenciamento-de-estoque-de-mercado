@@ -9,8 +9,12 @@ int main(void)
   char nome_produto[50],tipo[50],data_fabricacao[11],data_validade[11];
   float preco;
   int opBusca;
-//ListaProduto* list_insere = produto;
   int opcao;
+               Produto** novo= (Produto**)malloc(sizeof(Produto));
+                if(novo == NULL){
+                printf("Erro ao alocar memoria!\n");
+                exit(1);
+               }
 
     do {
         // Menu
@@ -29,11 +33,6 @@ int main(void)
 
         switch (opcao) {
             case 1:
-               Produto** novo= (Produto**)malloc(sizeof(Produto));
-               if(novo == NULL){
-                printf("Erro ao alocar memoria!\n");
-                exit(1);
-               }
         printf("Tipo do produto:\n");
         scanf(" %[^\n]",tipo);
          capitalizeString(tipo);

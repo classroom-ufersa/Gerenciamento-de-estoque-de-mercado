@@ -29,7 +29,7 @@ return p;
 }
 
 void imprime_produto(Produto* prod){
-    Produto*p;
+    Produto* p;
     for(p=prod; p!=NULL; p=p->prox){
         printf("Tipo: %s\n", p->tipo);
         printf("Nome do produto:%s\n", p->nome);

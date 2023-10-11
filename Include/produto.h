@@ -1,3 +1,6 @@
+#ifndef PRODUTO_H
+#define PRODUTO_H
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -13,3 +16,5 @@ void imprime_produto(Produto* prod);
  Produto* busca(Produto* prod, char nomeProd[]);
 
 Produto* retira(Produto*l, char nome_produto[]);
+
+#endif // PRODUTO_H
