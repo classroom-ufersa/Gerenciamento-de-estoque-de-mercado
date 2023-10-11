@@ -70,4 +70,3 @@ void preencherDepartamento(Departamento *departamento) {
     }
 }
 
-
