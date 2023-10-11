@@ -1,5 +1,4 @@
 #include"../Include/produto.h"
-#include"../Include/departamento.h"
 
 typedef struct produto{
 char tipo[50];

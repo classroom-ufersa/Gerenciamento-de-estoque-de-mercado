@@ -46,10 +46,10 @@ int main(void)
         scanf(" %[^\n]",data_fabricacao);
         printf("Data de validade (mes ano):\n");
         scanf(" %[^\n]",data_validade);
-        preencherDepartamento(&departamento);
+        preencherDepartamento(&produto->departamento);
         printf("Quantidade de estoque:\n");
         scanf("%d",&estoque);
-       novo[contador_produto] = cria_prod(tipo,nome_produto,preco,data_fabricacao,data_validade,departamento,estoque);
+        novo[contador_produto] = cria_prod(tipo,nome_produto,preco,data_fabricacao,data_validade,departamento,estoque);
         contador_produto++;
             case 2:
                 printf("Informe o nome do produto a ser removido:");
@@ -57,7 +57,6 @@ int main(void)
                 remover_produto(produto,retira);
                 break;
             case 3:
-            printf("Listando produtos..\n");
                 imprime_produto(produto);
                 break;
             case 4:
