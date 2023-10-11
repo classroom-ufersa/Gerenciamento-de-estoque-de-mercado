@@ -1,5 +1,5 @@
 #include"departamento.c"
-
+#include"produto.c"
 int main(void)
 {
   char  removido[50];
@@ -62,7 +62,9 @@ int main(void)
                 editar_produto(produto);
                 break;
             case 5:
-                buscar_produto(produto);
+                printf("Informe o nome do produto que deseja buscar:\n");
+                scanf("%d", &opBusca);
+                buscar_produto(produto, opBusca);
                 break;
             case 6:
                 consultar_departamento(produto);

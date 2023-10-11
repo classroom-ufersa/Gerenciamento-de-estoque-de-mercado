@@ -24,6 +24,7 @@ strcpy(p->data_fabricacao,fabric);
 strcpy(p->data_validade,valid);
 p->estoque = estoq;
 p->departamento = depart;
+<<<<<<< HEAD
 p->prox = produto;
 return p;
 }
@@ -58,6 +59,10 @@ return p;
       }
         }
 
+p->prox = NULL;
+return p;
+}
+
 void imprime_produto(Produto* prod){
     Produto*p;
     for(p=prod; p!=NULL; p=p->prox){
@@ -71,6 +76,7 @@ void imprime_produto(Produto* prod){
     }
 }
     ListaProduto* busca(ListaProduto* prod, char nomeProd[]){
+    Produto* busca(Produto* prod, char nomeProd[]){
    Produto* p;
    for(p = prod; p != NULL; p = p->prox){
     if(strcmp(p->nome, nomeProd)==0){
@@ -78,6 +84,7 @@ void imprime_produto(Produto* prod){
     }
    } 
     return NULL;
+}
 }
 
     Produto* retira(Produto*l, char nome_produto[]){
