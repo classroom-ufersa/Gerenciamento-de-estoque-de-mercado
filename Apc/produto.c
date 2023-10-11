@@ -1,4 +1,5 @@
 #include"../Include/produto.h"
+#include"../Include/departamento.h"
 
 typedef struct produto{
 char tipo[50];
@@ -11,7 +12,7 @@ int estoque;
 struct Produto* prox;
 }Produto;
 
-Produto* cria_prod(Produto* produto, char tipo[50], char nome_produto[50], float preco,char fabric[11], char valid[11], int estoq, Departamento** depart){
+Produto* cria_prod(char tipo[50], char nome_produto[50], float preco,char fabric[11], char valid[11], int estoq, Departamento** depart){
 Produto* p = (Produto*)malloc(sizeof(Produto));
 if(p == NULL){
     printf("Erro ao alocar memoria1\n");
@@ -24,39 +25,9 @@ strcpy(p->data_fabricacao,fabric);
 strcpy(p->data_validade,valid);
 p->estoque = estoq;
 p->departamento = depart;
-p->prox = produto;
+p->prox = NULL;
 return p;
 }
-
-    ListaProduto* ordenalista(ListaProduto* p, Produto* produto){//esssa função tem que mudar
-        ListaProduto*novo = (ListaProduto*)malloc(sizeof(ListaProduto));
-        if(novo == NULL){
-            printf("Erro ao alocar memoria!\n");
-            exit(1);
-        }
-        novo->info = produto;
-        ListaProduto* ant = NULL;
-        ListaProduto* aux = p;
-
-        while(aux != NULL && aux->info->nome < produto->nome){
-            ant = aux;
-            aux = aux->prox;
-        }
-      if(ant == NULL){
-        novo->prox = p;
-        novo->ant = NULL;
-        p->ant = novo;
-      }
-      else{
-        novo->prox = ant->prox;
-        novo->ant = ant;
-        ant->prox = novo;
-        if(aux != NULL){
-            aux->ant = novo;
-        }
-        return p;
-      }
-        }
 
 void imprime_produto(Produto* prod){
     Produto*p;

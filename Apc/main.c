@@ -1,13 +1,14 @@
 #include"departamento.c"
-
+#include"produto.c"
 int main(void)
 {
   char  removido[50];
   Produto* produto; 
   Departamento* departamento;
   int contador_produto = 0,estoque;
-  char nome_produto[50],tipo_produto[50],data_fabricacao,data_validade;
+  char nome_produto[50],tipo[50],data_fabricacao,data_validade;
   float preco;
+  int opBusca;
 //ListaProduto* list_insere = produto;
   int opcao;
 
@@ -34,8 +35,8 @@ int main(void)
                 exit(1);
                }
         printf("Tipo do produto:\n");
-        scanf(" %[^\n]",tipo_produto);
-         capitalizeString(tipo_produto);
+        scanf(" %[^\n]",tipo);
+         capitalizeString(tipo);
         printf("Nome do produto:\n");
         scanf(" %[^\n]", nome_produto);
         capitalizeString(nome_produto);
@@ -45,10 +46,10 @@ int main(void)
         scanf(" %[^\n]",data_fabricacao);
         printf("Data de validade (mes ano):\n");
         scanf(" %[^\n]",data_validade);
-        preencherDepartamento(&produto->departamento);
+        preencherDepartamento(&departamento);
         printf("Quantidade de estoque:\n");
         scanf("%d",&estoque);
-        novo[contador_produto] = cria_prod(tipo_produto,nome_produto,preco,data_fabricacao,data_validade,departamento,estoque);
+       novo[contador_produto] = cria_prod(tipo,nome_produto,preco,data_fabricacao,data_validade,departamento,estoque);
         contador_produto++;
             case 2:
                 printf("Informe o nome do produto a ser removido:");
@@ -56,13 +57,16 @@ int main(void)
                 remover_produto(produto,retira);
                 break;
             case 3:
+            printf("Listando produtos..\n");
                 imprime_produto(produto);
                 break;
             case 4:
                 editar_produto(produto);
                 break;
             case 5:
-                buscar_produto(produto);
+                printf("Informe o nome do produto que deseja buscar:\n");
+                scanf("%d", &opBusca);
+                buscar_produto(produto, opBusca);
                 break;
             case 6:
                 consultar_departamento(produto);
