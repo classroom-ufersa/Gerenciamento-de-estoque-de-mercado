@@ -6,7 +6,7 @@ int main(void)
   Produto* produto; 
   Departamento* departamento;
   int contador_produto = 0,estoque;
-  char nome_produto[50],tipo[50],data_fabricacao,data_validade;
+  char nome_produto[50],tipo[50],data_fabricacao[11],data_validade[11];
   float preco;
   int opBusca;
 //ListaProduto* list_insere = produto;
@@ -29,7 +29,7 @@ int main(void)
 
         switch (opcao) {
             case 1:
-               Produto* novo= (Produto*)malloc(sizeof(Produto));
+               Produto** novo= (Produto**)malloc(sizeof(Produto));
                if(novo == NULL){
                 printf("Erro ao alocar memoria!\n");
                 exit(1);
