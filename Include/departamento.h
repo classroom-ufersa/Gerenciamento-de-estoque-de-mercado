@@ -3,13 +3,9 @@
 #include<string.h>
 
 /**struct para os campos do departamento*/
-typedef struct{
-    char nome[20];
-    char produto[20];
-    char porte[8];
-    
-}Departamento;
+typedef struct departamento Departamento;
 
+Departamento* cria_departamento(char nome[50],char porte[50], int codigo, Produto** produto);
 void capitalizeString(char *str);
 Departamento *criarDepartamento();
 void liberarDepartamento(Departamento *departamento);
