@@ -1,4 +1,4 @@
-#include"C:\Users\miche\projeto gerenciamento de mercado\Gerenciamento-de-estoque-de-mercado\Include\produto.h"
+#include"../Include/produto.h"
 
 typedef struct produto{
 char tipo[50];
@@ -28,7 +28,7 @@ p->prox = produto;
 return p;
 }
 
-    ListaProduto* ordenalista(ListaProduto* p, Produto* produto){
+    ListaProduto* ordenalista(ListaProduto* p, Produto* produto){//esssa função tem que mudar
         ListaProduto*novo = (ListaProduto*)malloc(sizeof(ListaProduto));
         if(novo == NULL){
             printf("Erro ao alocar memoria!\n");
