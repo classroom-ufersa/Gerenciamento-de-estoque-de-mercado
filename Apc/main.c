@@ -2,8 +2,14 @@
 
 int main(void)
 {
-ListaProduto* list_insere = produto;
-int opcao;
+  char  removido[50];
+  Produto* produto; 
+  Departamento* departamento;
+  int contador_produto = 0,estoque;
+  char nome_produto[50],tipo_produto[50],data_fabricacao,data_validade;
+  float preco;
+//ListaProduto* list_insere = produto;
+  int opcao;
 
     do {
         // Menu
@@ -22,13 +28,35 @@ int opcao;
 
         switch (opcao) {
             case 1:
-                printf("Deseja adicionar um novo produto?");
-                preenche_produto(produto);
+               Produto* novo= (Produto*)malloc(sizeof(Produto));
+               if(novo == NULL){
+                printf("Erro ao alocar memoria!\n");
+                exit(1);
+               }
+        printf("Tipo do produto:\n");
+        scanf(" %[^\n]",tipo_produto);
+         capitalizeString(tipo_produto);
+        printf("Nome do produto:\n");
+        scanf(" %[^\n]", nome_produto);
+        capitalizeString(nome_produto);
+        printf("Preco:\n");
+        scanf("%f",&preco);
+        printf("Data de fabricacao (dia mes ano):\n");
+        scanf(" %[^\n]",data_fabricacao);
+        printf("Data de validade (mes ano):\n");
+        scanf(" %[^\n]",data_validade);
+        preencherDepartamento(&produto->departamento);
+        printf("Quantidade de estoque:\n");
+        scanf("%d",&estoque);
+        novo[contador_produto] = cria_prod(tipo_produto,nome_produto,&preco,data_fabricacao,data_validade,departamento,&estoque);
+        contador_produto++;
             case 2:
-                remover_produto(produto);
+                printf("Informe o nome do produto a ser removido:");
+                scanf(" %[^\n]",removido);
+                remover_produto(produto,retira);
                 break;
             case 3:
-                listar_produtos(produto);
+                imprime_produto(produto);
                 break;
             case 4:
                 editar_produto(produto);
@@ -43,7 +71,8 @@ int opcao;
                 consultar_quantidade_departamento(produto);
                 break;
             case 8:
-                sair(produto);
+                printf("Saindo...\n");
+                exit(1);
                 break;
             default:
                 printf("Opcao invalida. Tente novamente.\n");
