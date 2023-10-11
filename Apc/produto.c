@@ -63,7 +63,6 @@ return l;
 }
 */
 
-<<<<<<< HEAD
 void preenche_produto(Produto* produto){
     printf("Tipo do produto:\n");
     scanf(" %[^\n]", produto->tipo);
@@ -77,7 +76,7 @@ void preenche_produto(Produto* produto){
     preencherDepartamento(&produto->departamento);
     printf("Quantidade de estoque:\n");
     scanf("%d", &produto->estoque);
-=======
+
 void preenche_produto(void){
 Produto produto;
 printf("Tipo do produto:\n");
@@ -95,7 +94,7 @@ scanf("%d %d", &produto.data_validade.mes,&produto.data_validade.ano);
 preencherDepartamento(&produto.departamento);
 printf("Quantidade de estoque:\n");
 scanf("%d",&produto.estoque);
->>>>>>> d0abdb6da0e5224a60f99fbb4c26f31cc6561266
+
 }
 
 void add_lista_arquivo(ListaProduto* produto){
@@ -118,10 +117,9 @@ void add_lista_arquivo(ListaProduto* produto){
         novo = novo->prox;
     }
     fclose(arquivo);
-<<<<<<< HEAD
     
     ListaProduto* ordena(ListaProduto* p, Produto produto);{
-=======
+
 }
     ListaProduto* ordenalista(ListaProduto* p, Produto* produto){
 >>>>>>> d0abdb6da0e5224a60f99fbb4c26f31cc6561266
