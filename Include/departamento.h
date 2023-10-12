@@ -1,3 +1,6 @@
+#ifndef DEPARTAMENTO_H
+#define DEPARTAMENTO_H
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -11,3 +14,5 @@ Departamento *criarDepartamento();
 void liberarDepartamento(Departamento *departamento);
 /*Função para preencher os dados do departamento*/
 void preencherDepartamento(Departamento* departamento);
+
+#endif //DEPARTAMENTO_H

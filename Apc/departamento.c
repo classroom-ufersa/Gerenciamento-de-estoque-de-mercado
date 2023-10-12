@@ -4,7 +4,7 @@
 
 typedef struct departamento{
     char nome[20];
-    Produto* produto;
+    Produto** produto;
     char porte[8];
     int codigo;
     struct Departamento* prox;
