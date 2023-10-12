@@ -1,6 +1,7 @@
 #include"../Include/departamento.h"
 #include"../Include/produto.h"
 
+
 typedef struct departamento{
     char nome[20];
     Produto* produto;
@@ -9,7 +10,7 @@ typedef struct departamento{
     struct Departamento* prox;
 }Departamento;
 
-Departamento* cria_departamento(char nome[50],char porte[50], int codigo, Produto** produto){
+Departamento* cria_departamento(char nome[20],char porte[8], int codigo, Produto* produto){
 Departamento* d = (Departamento*)malloc(sizeof(Departamento));
 if(d == NULL){
     printf("erro ao alocar memoria!\n");
@@ -56,7 +57,7 @@ void preencherDepartamento(Departamento *departamento) {
     scanf("%d", departamento->codigo);
 
     printf("Produto: ");
-    scanf(" %[^\n]", departamento->produto);
+    scanf(" %[ ^\n]", departamento->produto);
     capitalizeString(departamento->produto);
 
     // Loop para verificar as condições corretas
