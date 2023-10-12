@@ -1,22 +1,24 @@
-#include"../Include/departamento.h"
 #include"../Include/produto.h"
+#include"../Include/departamento.h"
 
 
 typedef struct departamento{
     char nome[20];
-    Produto** produto;
+    Produto* produto;
     char porte[8];
-    int codigo;
     struct Departamento* prox;
 }Departamento;
 
-Departamento* cria_departamento(char nome[50],char porte[50], int codigo, Produto* produto){
+Departamento* cria_departamento(char nome[],char porte[]){
 Departamento* d = (Departamento*)malloc(sizeof(Departamento));
 if(d == NULL){
     printf("erro ao alocar memoria!\n");
 }
+strcpy(d->nome,nome);
+strcpy(d->porte, porte);
+d->produto = NULL;
 
-
+return d;
 }
 void capitalizeString(char *str)
 {
@@ -52,9 +54,6 @@ void preencherDepartamento(Departamento *departamento) {
     printf("Nome do departamento: ");
     scanf(" %[^\n]", departamento->nome);
     capitalizeString(departamento->nome);
-
-    printf("Informe o codigo do departamento:\n");
-    scanf("%d", departamento->codigo);
 
     printf("Produto: ");
     scanf(" %[ ^\n]", departamento->produto);

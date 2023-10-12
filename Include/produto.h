@@ -9,7 +9,7 @@
 /*struct de produto*/
 typedef struct produto Produto;
 
-Produto* cria_prod(char tipo[50], char nome_produto[50], float preco,char fabric[11], char valid[11], int estoq, Departamento** departamento);
+Produto* cria_prod(char tipo[], char nome_produto[], float preco,char fabric[], char valid[], int estoq);
 
 void imprime_produto(Produto* prod);
 
