@@ -58,20 +58,20 @@ int main(void)
             case 3:
                 imprime_produto(produto);
                 break;
-            case 4:
+              /*case 4:
                 editar_produto(produto);
-                break;
+                break;*/
             case 5:
                 printf("Informe o nome do produto que deseja buscar:\n");
                 scanf("%d", &opBusca);
                 buscar_produto(produto, opBusca);
                 break;
-            case 6:
+            /*case 6:
                 consultar_departamento(produto);
-                break;
-            case 7:
+                break;*/
+            /*case 7:
                 consultar_quantidade_departamento(produto);
-                break;
+                break;*/
             case 8:
                 printf("Saindo...\n");
                 exit(1);
@@ -80,7 +80,6 @@ int main(void)
                 printf("Opcao invalida. Tente novamente.\n");
         }
     } while (opcao != 8);
-
-    return 0;
-}
+    
+libera_lista(produto);
     

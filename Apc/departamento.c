@@ -10,7 +10,7 @@ typedef struct departamento{
     struct Departamento* prox;
 }Departamento;
 
-Departamento* cria_departamento(char nome[50],char porte[50], int codigo, Produto** produto){
+Departamento* cria_departamento(char nome[50],char porte[50], int codigo, Produto* produto){
 Departamento* d = (Departamento*)malloc(sizeof(Departamento));
 if(d == NULL){
     printf("erro ao alocar memoria!\n");
