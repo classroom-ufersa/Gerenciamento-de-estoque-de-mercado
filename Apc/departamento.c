@@ -57,7 +57,7 @@ void preencherDepartamento(Departamento *departamento) {
     scanf("%d", departamento->codigo);
 
     printf("Produto: ");
-    scanf(" %[^\n]", departamento->produto);
+    scanf(" %[ ^\n]", departamento->produto);
     capitalizeString(departamento->produto);
 
     // Loop para verificar as condições corretas

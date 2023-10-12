@@ -4,7 +4,7 @@ typedef struct produto{
 char tipo[50];
 char nome[50];
 float preco;
-char data_fabricacao[11];
+int data_fabricacao;
 char data_validade[11];
 Departamento** departamento;
 int estoque;
@@ -30,12 +30,12 @@ return p;
 
 void imprime_produto(Produto* prod){
     Produto* p;
-    for(p=prod; p!=NULL; p=p->prox){
+    for(p=prod; p!=NULL; p = p->prox){
         printf("Tipo: %s\n", p->tipo);
         printf("Nome do produto:%s\n", p->nome);
         printf("Preco:%f\n", p->preco);
         printf("Data de fabricacao: %d/%d/%d", p->data_fabricacao);
-        printf("Data de validade:%d/%d\n", p->data_validade);
+        printf("Data de validade: %s/%s", p->data_validade);
         printf("Departamento", p->departamento);
         printf("Quantidade em estoque", p->estoque);
     }

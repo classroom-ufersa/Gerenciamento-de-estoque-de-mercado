@@ -4,11 +4,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include "produto.h"
+#include"produto.h"
 /**struct para os campos do departamento*/
 typedef struct departamento Departamento;
 
-Departamento* cria_departamento(char nome[50],char porte[50], int codigo, Produto** produto);
+Departamento* cria_departamento(char nome[20],char porte[50], int codigo, Produto* produto);
 void capitalizeString(char *str);
 Departamento *criarDepartamento();
 void liberarDepartamento(Departamento *departamento);

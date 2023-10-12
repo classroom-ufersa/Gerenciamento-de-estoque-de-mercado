@@ -80,6 +80,6 @@ int main(void)
                 printf("Opcao invalida. Tente novamente.\n");
         }
     } while (opcao != 8);
-    
+
 libera_lista(produto);
     
