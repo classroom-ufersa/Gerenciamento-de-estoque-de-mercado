@@ -1,5 +1,5 @@
-#include"../Include/produto.h"
-
+#include"../include/departamento.h"
+#include"../include/produto.h"
 typedef struct produto{
 char tipo[50];
 char nome[50];

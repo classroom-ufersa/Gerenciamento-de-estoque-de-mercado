@@ -5,7 +5,9 @@
 #include<stdlib.h>
 #include<string.h>
 #include"departamento.h"
-
+//declaração avançada de departamento
+//struct departamento;
+//typedef departamento Departamento;
 /*struct de produto*/
 typedef struct produto Produto;
 
@@ -16,5 +18,20 @@ void imprime_produto(Produto* prod);
  Produto* busca(Produto* prod, char nomeProd[]);
 
 Produto* retira(Produto*l, char nome_produto[]);
+
+Produto* insere_ordenado(Produto* produto, char* n);
+
+Produto** ler_arquivo(Produto** produto, int* tam);
+
+Produto* grava_arquivo(Produto**produto, int tam);
+
+void libera_lista(Produto*l);
+
+char le_op(int menor_valor, int maior_valor);
+
+void limparBuffer(Produto* prod);
+
+void editar_produto(Produto* prod);
+
 
 #endif // PRODUTO_H

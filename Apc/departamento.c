@@ -1,5 +1,5 @@
-#include"../Include/produto.h"
-#include"../Include/departamento.h"
+#include"../include/produto.h"
+#include"../include/departamento.h"
 
 
 typedef struct departamento{
