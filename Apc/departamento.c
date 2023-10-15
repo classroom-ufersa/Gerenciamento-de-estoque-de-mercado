@@ -9,7 +9,7 @@ typedef struct departamento{
     struct departamento* prox;
 }Departamento;
 
-Departamento* cria_departamento(char nome[],char porte[]){
+Departamento* criaDepartamento(char nome[],char porte[]){
 Departamento* d = (Departamento*)malloc(sizeof(Departamento));
 if(d == NULL){
     printf("erro ao alocar memoria!\n");
@@ -20,6 +20,7 @@ d->produto = NULL;
 
 return d;
 }
+
 void capitalizeString(char *str)
 {
     if (str[0] != '\0')
@@ -79,6 +80,8 @@ void preencherDepartamento(Departamento *departamento) {
         printf("Informe o porte do produto (GRANDE, MEDIO ou PEQUENO): ");
         scanf(" %[^\n]", departamento->porte);
         capitalizeString(departamento->porte);
+
+
     }
 }
 

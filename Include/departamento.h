@@ -18,5 +18,6 @@ Departamento *criarDepartamento();
 void liberarDepartamento(Departamento *departamento);
 /*Função para preencher os dados do departamento*/
 void preencherDepartamento(Departamento* departamento);
+void preencherDepartamento(Departamento* produto);
 
 #endif //DEPARTAMENTO_H

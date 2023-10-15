@@ -69,7 +69,7 @@ int main(void)
                 printf("Informe o nome do produto que deseja editar:\n");
                 scanf(" %[^\n]", nome);
                 capitalizeString(nome);
-                novo = busca(produto->nome,novo);
+                novo = busca(produto->nome, novo);
                 editar_produto(novo);
                 break;
             case 5:
