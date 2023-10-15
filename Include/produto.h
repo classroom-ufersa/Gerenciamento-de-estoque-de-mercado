@@ -23,13 +23,13 @@ Produto* insere_ordenado(Produto* produto, char* n);
 
 Produto** ler_arquivo(Produto** produto, int* tam);
 
-Produto* grava_arquivo(Produto**produto, int tam);
+void grava_arquivo(Produto**produto);
 
 void libera_lista(Produto*l);
 
 char le_op(int menor_valor, int maior_valor);
 
-void limparBuffer(Produto* prod);
+void limparBuffer(void);
 
 void editar_produto(Produto* prod);
 

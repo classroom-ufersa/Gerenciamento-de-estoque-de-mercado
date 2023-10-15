@@ -1,5 +1,6 @@
 #include"../include/departamento.h"
 #include"../include/produto.h"
+
 typedef struct produto{
 char tipo[50];
 char nome[50];
@@ -8,7 +9,7 @@ char data_fabricacao[11];
 char data_validade[11];
 Departamento* departamento;
 int estoque;
-struct Produto* prox;
+struct produto* prox;
 }Produto;
 
 Produto* cria_prod(char tipo[], char nome_produto[], float preco,char fabric[], char valid[], int estoq){
@@ -34,10 +35,10 @@ void imprime_produto(Produto* prod){
         printf("Tipo: %s\n", p->tipo);
         printf("Nome do produto:%s\n", p->nome);
         printf("Preco:%f\n", p->preco);
-        printf("Data de fabricacao: %s", p->data_fabricacao);
-        printf("Data de validade: %s", p->data_validade);
-        printf("Departamento", p->departamento);
-        printf("Quantidade em estoque", p->estoque);
+        printf("Data de fabricacao: %s\n", p->data_fabricacao);
+        printf("Data de validade: %s\n", p->data_validade);
+        printf("Departamento: %s\n", p->departamento);
+        printf("Quantidade em estoque: %d\n", p->estoque);
     }
 }
 
@@ -67,10 +68,10 @@ void imprime_produto(Produto* prod){
     else{
         ant->prox = p->prox;
     }
+    }
     free(p);
     return l;
     }
-}
 
 Produto* insere_ordenado(Produto* produto, char* n){
 Produto* novo;
@@ -105,46 +106,47 @@ int cont = 0;
     exit(1);
  }
 
+Produto* novo_prod = (Produto*)malloc(sizeof(Produto));
 while(fscanf(arquivo, sizeof(linha), arquivo)!= EOF){
-    sscanf(linha, "Tipo: %[^\n]",lista_produto->tipo);
+    sscanf(linha, "Tipo: %[^\n]",novo_prod->tipo);
     fgets(linha, 600, arquivo);
 
-    sscanf(linha, "Nome do produto: %[^\n]", lista_produto->nome);
+    sscanf(linha, "Nome do produto: %[^\n]", novo_prod->nome);
     fgets(linha, 600, arquivo);
 
-    sscanf(linha, "Preco: %f", arquivo);
+    sscanf(linha, "Preco: %f", novo_prod->preco);
     fgets(linha, 600, arquivo);
 
-    sscanf(linha, "Data de fabricacao: %[^\n]", arquivo);
+    sscanf(linha, "Data de fabricacao: %[^\n]", novo_prod->data_fabricacao);
     fgets(linha, 600, arquivo);
 
-    sscanf(linha, "Data de validade: %[^\n]", arquivo);
+    sscanf(linha, "Data de validade: %[^\n]", novo_prod->data_validade);
     fgets(linha, 600, arquivo);
 
-    sscanf(linha, "Departamento: %[^\n]", arquivo);
+    sscanf(linha, "Departamento: %[^\n]", novo_prod->departamento);
     fgets(linha, 600, arquivo);
 
-    sscanf(linha, "Estoque: %d", arquivo);
+    sscanf(linha, "Estoque: %d", novo_prod->estoque);
     fgets(linha, 600, arquivo);
-}
 
-lista_produto = insere_ordenado(lista_produto,linha);
+lista_produto = insere_ordenado(lista_produto,novo_prod);
 cont++;
+}
 *produto = lista_produto;
 *tam = cont;
 fclose(arquivo);
+
 return lista_produto;
 }
 
-Produto* grava_arquivo(Produto**produto, int tam){
-    int cont;
+void grava_arquivo(Produto**produto){
     Produto* p;
     FILE* arquivo = fopen("produtos.txt", "w");
     if(arquivo == NULL){
         printf("Erro ao abrir arquivo!\n");
         exit(1);
     }
-for(p = produto; p!= NULL; p = p->prox){
+for(p = *produto; p!= NULL; p = p->prox){
         fprintf(arquivo, "Tipo: %s\n", p->tipo);
         fprintf(arquivo, "Nome do produto: %s\n", p->nome);
         fprintf(arquivo, "Preco: %f\n", p->preco);
@@ -175,19 +177,20 @@ while (1){
     printf("Informe a sua opcao:\n");
     scanf(" %[^\n]", nome);
     op = nome[0];
-}
+
 if( op >= menor_valor && op <=maior_valor && strlen(nome)==1){
-    limpaBuffer();
-   // break; não entedi pq tava dando erro
+    limparBuffer();
+    break;
 }
 else{
     printf("A opcao que voce deu e invalida!\n informe uma dentro so intervalo %d - %d", menor_valor, maior_valor);
-    limparBuffer;
+    limparBuffer();
+}
 }
 return op;
 }
 
-void limparBuffer(Produto* prod){
+void limparBuffer(void){
 int valor_lido;
 do{
     valor_lido = getchar();
@@ -195,7 +198,7 @@ do{
 }
 
 void editar_produto(Produto* prod){
-char op;
+char op =  le_op('1','7');
 
 printf("Informe qual oprcao deseja editar:\n");
 printf("1- Tipo\n");
@@ -225,12 +228,12 @@ break;
 
 case '4':
 printf("Data de fabricacao:\n");
-scanf(" %[^\n]", prod->data_fabricacao);
+fgets(prod->data_fabricacao,sizeof(prod->data_fabricacao),stdin);
 break;
 
 case '5':
 printf("Data de validade:\n");
-scanf(" %[^\n]", prod->data_validade);
+fgets(prod->data_validade,sizeof(prod->data_validade),stdin);
 break;
 
 case '6':
