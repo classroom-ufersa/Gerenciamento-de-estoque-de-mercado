@@ -21,8 +21,26 @@ void capitalizeString(char *str)
     }
 }
 
+
 Departamento *criarDepartamento(char nome_dep[], char porte[])
 {
+
+Departamento* criaDepartamento(char nome[],char porte[]){
+Departamento* d = (Departamento*)malloc(sizeof(Departamento));
+if(d == NULL){
+    printf("erro ao alocar memoria!\n");
+}
+strcpy(d->nome,nome);
+strcpy(d->porte, porte);
+d->produto = NULL;
+
+return d;
+}
+}
+
+
+Departamento *criarDepartamento(char nome_dep[],char porte[]) {
+
     // Aloca dinamicamente a memória para uma estrutura Departamento
     Departamento *novoDepartamento = (Departamento *)malloc(sizeof(Departamento));
 
@@ -80,6 +98,7 @@ void preencherDepartamento(Departamento *departamento, Produto *prod)
     }
 }
 
+
 Departamento *add_prod_dep(Departamento *depar, Produto *prod, char nome_depart[])
 {
     Departamento *aux;
@@ -92,3 +111,35 @@ Departamento *add_prod_dep(Departamento *depar, Produto *prod, char nome_depart[
     aux->produto = prod;
     return depar;
 }
+
+void criarArquivo(Departamento *departamento, int n)
+{
+    // Abre o arquivo em modo leitura para verificar o cabeçalho
+    FILE *arquivoVerificacao = fopen("departamento.txt", "r");
+
+    // Verifica se o cabeçalho já existe
+    int cabecalhoExiste = 0;
+    char linha[100];
+    while (fgets(linha, sizeof(linha), arquivoVerificacao) != NULL)
+    {
+        if (strstr(linha, "Funcionarios cadastrados") != NULL)
+        {
+            cabecalhoExiste = 1;
+            break;
+        }
+    }
+
+    fclose(arquivoVerificacao);
+}
+
+/*void EstoquePDepartamento(Departamento *departamento, int numDepartamento)
+{
+    printf("Consultar Quantidade por Departamento:\n");
+    for (int i = 0; i < numDepartamento; i++) {
+        Departamento *departamento = &departamento[i];
+
+        printf("Departamento: %s\n", departamento->p->nome);
+        printf("Quantidade de Produtos: %d\n", departamento->p->estoque);
+    }
+}*/
+

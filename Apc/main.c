@@ -94,9 +94,9 @@ int main(void)
                 busca(produto->nome, opBusca);
                 
                 break;
-            /*case 6:
-                consultar_departamento(produto);
-                break;*/
+            case 6:
+    
+                break;
             /*case 7:
                 consultar_quantidade_departamento(produto);
                 break;*/
