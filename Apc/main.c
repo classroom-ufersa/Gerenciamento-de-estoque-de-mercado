@@ -5,6 +5,7 @@ int main(void)
   char  removido[50];
   Produto* produto; 
   Departamento* departamento;
+  Departamento* busca_depart;
   int contador_produto = 0,estoque;
   char nome_produto[50],tipo[50],data_fabricacao[11],data_validade[11];
   float preco;
@@ -36,30 +37,41 @@ int main(void)
             case 1:
         printf("Tipo do produto:\n");
         scanf(" %[^\n]",tipo);
+        limparBuffer();
          capitalizeString(tipo);
         printf("Nome do produto:\n");
         scanf(" %[^\n]", nome_produto);
+        limparBuffer();
         capitalizeString(nome_produto);
         printf("Preco:\n");
         scanf("%f",&preco);
+        limparBuffer();
         printf("Data de fabricacao (dia mes ano):\n");
         scanf(" %[^\n]",data_fabricacao);
+        limparBuffer();
         printf("Data de validade (mes ano):\n");
         scanf(" %[^\n]",data_validade);
+        limparBuffer();
 
         printf("Departamento: \n");
         scanf(" %[^\n]",nome_dep);
-        //busca_departamento(departamento,nome_dep);
-
-
+        limparBuffer();
+        busca_depart = busca_departamento(departamento,nome_dep);
         printf("Quantidade de estoque:\n");
         scanf("%d",&estoque);
         novo[contador_produto] = cria_prod(tipo,nome_produto,preco,data_fabricacao,data_validade,estoque);
+        if(busca_depart == NULL){
+          preencherDepartamento(departamento,novo[contador_produto]);  
+        }
+        else{
+          departamento = add_prod_dep(departamento,novo[contador_produto],nome_dep);  
+        }
         contador_produto++;
         break;
             case 2:
                 printf("Informe o nome do produto a ser removido:");
                 scanf(" %[^\n]",removido);
+                limparBuffer();
                 Produto* retira(Produto*l, char nome_produto[]);
                 break;
             case 3:
@@ -68,6 +80,7 @@ int main(void)
             case 4:
                 printf("Informe o nome do produto que deseja editar:\n");
                 scanf(" %[^\n]", nome);
+                limparBuffer();
                 capitalizeString(nome);
                 novo = busca(produto->nome, novo);
                 editar_produto(novo);
@@ -76,6 +89,7 @@ int main(void)
             
                 printf("Informe o nome do produto que deseja buscar:\n");
                 scanf("%d", &opBusca);
+                limparBuffer();
                 capitalizeString(opBusca);
                 busca(produto->nome, opBusca);
                 

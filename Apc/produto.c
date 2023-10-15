@@ -202,13 +202,12 @@ char op =  le_op('1','7');
 
 printf("Informe qual oprcao deseja editar:\n");
 printf("1- Tipo\n");
-printf("2- Nome do produto\n");
-printf("3-Preco\n");
-printf("4-Data de fabricacao");
-printf("5- Data de validade\n");
-printf("60- Departamento\n");
-printf("Quantidade em estoque");
-le_op('1','4');
+printf("2-Preco\n");
+printf("3-Data de fabricacao");
+printf("4- Data de validade\n");
+printf("5- Departamento\n");
+printf("6-Quantidade em estoque");
+le_op('1','6');
 
 switch(op){
 case '1':
@@ -217,31 +216,29 @@ scanf(" %[^\n]", prod->tipo);
 break;
 
 case '2':
-printf("Nome:\n");
-scanf(" %[^\n]", prod->nome);
-break;
-
-case '3':
 printf("Preco:\n");
 scanf("%f",&prod->preco);
 break;
 
-case '4':
+case '3':
 printf("Data de fabricacao:\n");
 fgets(prod->data_fabricacao,sizeof(prod->data_fabricacao),stdin);
 break;
 
-case '5':
+case '4':
 printf("Data de validade:\n");
 fgets(prod->data_validade,sizeof(prod->data_validade),stdin);
+
+break;
+
+case '5':
+printf("Departamento:\n");
+scanf(" %[^\n]", prod->departamento);
+
 break;
 
 case '6':
-printf("Departamento:\n");
-scanf(" %[^\n]", prod->departamento);
-break;
 
-case '7':
 printf("Estoque:\n");
 scanf("%d", prod->estoque);
 break;

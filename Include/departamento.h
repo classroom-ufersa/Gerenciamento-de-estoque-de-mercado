@@ -8,8 +8,8 @@
 #include<ctype.h>
 
 //declaração avançada de produto
-//struct produto;
-//typedef struct produto Produto;
+struct produto;
+typedef struct produto Produto;
 /**struct para os campos do departamento*/
 typedef struct departamento Departamento;
 Departamento* cria_departamento(char nome[],char porte[]);
@@ -17,7 +17,7 @@ void capitalizeString(char *str);
 Departamento *criarDepartamento();
 void liberarDepartamento(Departamento *departamento);
 /*Função para preencher os dados do departamento*/
-void preencherDepartamento(Departamento* departamento);
-void preencherDepartamento(Departamento* produto);
+void preencherDepartamento(Departamento *departamento, Produto* prod);
 
+Departamento *add_prod_dep(Departamento *depar, Produto *prod, char nome_depart[]);
 #endif //DEPARTAMENTO_H
