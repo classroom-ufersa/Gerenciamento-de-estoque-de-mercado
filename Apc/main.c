@@ -63,7 +63,11 @@ int main(void)
                 printf("Informe o nome do produto que deseja editar:\n");
                 scanf(" %[^\n]", nome);
                 capitalizeString(nome);
+<<<<<<< HEAD
                 novo = busca(produto->nome, novo);
+=======
+                novo = busca(produto->nome,novo);
+>>>>>>> 8f662ce9eb1d308623a3507dbbed3167fcb2db96
                 editar_produto(novo);
                 break;
             case 5:
@@ -89,6 +93,9 @@ int main(void)
     } while (opcao != 8);
 
 libera_lista(produto);
+<<<<<<< HEAD
 return 0;
 }
+=======
+>>>>>>> 8f662ce9eb1d308623a3507dbbed3167fcb2db96
     

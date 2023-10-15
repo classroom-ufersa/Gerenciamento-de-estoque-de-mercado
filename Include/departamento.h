@@ -9,7 +9,10 @@
 //struct produto;
 //typedef struct produto Produto;
 /**struct para os campos do departamento*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8f662ce9eb1d308623a3507dbbed3167fcb2db96
 typedef struct departamento Departamento;
 Departamento* cria_departamento(char nome[],char porte[]);
 void capitalizeString(char *str);
