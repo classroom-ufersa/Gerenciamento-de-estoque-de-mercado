@@ -22,6 +22,7 @@ void capitalizeString(char *str)
     }
 }
 
+<<<<<<< HEAD
 Departamento* criaDepartamento(char nome[],char porte[]){
 Departamento* d = (Departamento*)malloc(sizeof(Departamento));
 if(d == NULL){
@@ -35,6 +36,8 @@ return d;
 }
 
 
+=======
+>>>>>>> 2ac1d3b86cda8bb25d7116f784661851a6719878
 Departamento *criarDepartamento(char nome_dep[],char porte[]) {
     // Aloca dinamicamente a memória para uma estrutura Departamento
     Departamento *novoDepartamento = (Departamento *)malloc(sizeof(Departamento));
