@@ -5,21 +5,10 @@
 typedef struct departamento{
     char nome[20];
     Produto* produto;
+    Produto* p;
     char porte[8];
-    struct Departamento* prox;
+    struct departamento* prox;
 }Departamento;
-
-Departamento* criaDepartamento(char nome[],char porte[]){
-Departamento* d = (Departamento*)malloc(sizeof(Departamento));
-if(d == NULL){
-    printf("erro ao alocar memoria!\n");
-}
-strcpy(d->nome,nome);
-strcpy(d->porte, porte);
-d->produto = NULL;
-
-return d;
-}
 
 void capitalizeString(char *str)
 {
@@ -33,7 +22,20 @@ void capitalizeString(char *str)
     }
 }
 
-Departamento *criarDepartamento() {
+Departamento* criaDepartamento(char nome[],char porte[]){
+Departamento* d = (Departamento*)malloc(sizeof(Departamento));
+if(d == NULL){
+    printf("erro ao alocar memoria!\n");
+}
+strcpy(d->nome,nome);
+strcpy(d->porte, porte);
+d->produto = NULL;
+
+return d;
+}
+
+
+Departamento *criarDepartamento(char nome_dep[],char porte[]) {
     // Aloca dinamicamente a memória para uma estrutura Departamento
     Departamento *novoDepartamento = (Departamento *)malloc(sizeof(Departamento));
 
@@ -43,6 +45,10 @@ Departamento *criarDepartamento() {
         exit(1);
     }
 
+    strcpy(novoDepartamento->nome, nome_dep);
+    strcpy(novoDepartamento->porte, porte);
+    novoDepartamento->produto = NULL;
+  
     return novoDepartamento;
 }
 
@@ -51,6 +57,15 @@ void liberarDepartamento(Departamento *departamento) {
     free(departamento);
 }
 
+Departamento* busca_departamento(Departamento* departamento, char nomeDep[]){
+   Departamento* d;
+   for(d = departamento; d != NULL; d = d->prox){
+    if(strcmp(d->nome, nomeDep)==0){
+        return d;
+    }
+   } 
+    return NULL;
+}
 void preencherDepartamento(Departamento *departamento) {
     printf("Nome do departamento: ");
     scanf(" %[^\n]", departamento->nome);
@@ -58,7 +73,7 @@ void preencherDepartamento(Departamento *departamento) {
 
     printf("Produto: ");
     scanf(" %[^\n]", departamento->produto);
-    capitalizeString(departamento->produto);
+    //capitalizeString(departamento->produto);
 
     // Loop para verificar as condições corretas
     while (strcmp(departamento->porte, "GRANDE") != 0 &&
@@ -71,4 +86,35 @@ void preencherDepartamento(Departamento *departamento) {
 
     }
 }
+
+void criarArquivo(Departamento *departamento, int n)
+{
+    // Abre o arquivo em modo leitura para verificar o cabeçalho
+    FILE *arquivoVerificacao = fopen("departamento.txt", "r");
+
+    // Verifica se o cabeçalho já existe
+    int cabecalhoExiste = 0;
+    char linha[100];
+    while (fgets(linha, sizeof(linha), arquivoVerificacao) != NULL)
+    {
+        if (strstr(linha, "Funcionarios cadastrados") != NULL)
+        {
+            cabecalhoExiste = 1;
+            break;
+        }
+    }
+
+    fclose(arquivoVerificacao);
+}
+
+/*void EstoquePDepartamento(Departamento *departamento, int numDepartamento)
+{
+    printf("Consultar Quantidade por Departamento:\n");
+    for (int i = 0; i < numDepartamento; i++) {
+        Departamento *departamento = &departamento[i];
+
+        printf("Departamento: %s\n", departamento->p->nome);
+        printf("Quantidade de Produtos: %d\n", departamento->p->estoque);
+    }
+}*/
 

@@ -10,12 +10,22 @@
 //typedef struct produto Produto;
 /**struct para os campos do departamento*/
 typedef struct departamento Departamento;
+
 Departamento* cria_departamento(char nome[],char porte[]);
+
 void capitalizeString(char *str);
+
 Departamento *criarDepartamento();
+
 void liberarDepartamento(Departamento *departamento);
+
 /*Função para preencher os dados do departamento*/
 void preencherDepartamento(Departamento* departamento);
+
 void preencherDepartamento(Departamento* produto);
+
+void criarArquivo(Departamento *departamento, int n);
+
+void EstoquePDepartamento(Departamento *departamento, int numDepartamentos);
 
 #endif //DEPARTAMENTO_H

@@ -10,7 +10,7 @@ int main(void)
   float preco;
   int opBusca;
   int opcao;
-  char nome[50];
+  char nome[50], nome_dep[50];
                Produto** novo= (Produto**)malloc(sizeof(Produto));
                 if(novo == NULL){
                 printf("Erro ao alocar memoria!\n");
@@ -46,11 +46,17 @@ int main(void)
         scanf(" %[^\n]",data_fabricacao);
         printf("Data de validade (mes ano):\n");
         scanf(" %[^\n]",data_validade);
-        preencherDepartamento(produto->departamento);
+
+        printf("Departamento: \n");
+        scanf(" %[^\n]",nome_dep);
+        //busca_departamento(departamento,nome_dep);
+
+
         printf("Quantidade de estoque:\n");
         scanf("%d",&estoque);
         novo[contador_produto] = cria_prod(tipo,nome_produto,preco,data_fabricacao,data_validade,estoque);
         contador_produto++;
+        break;
             case 2:
                 printf("Informe o nome do produto a ser removido:");
                 scanf(" %[^\n]",removido);
@@ -67,15 +73,16 @@ int main(void)
                 editar_produto(novo);
                 break;
             case 5:
+            
                 printf("Informe o nome do produto que deseja buscar:\n");
                 scanf("%d", &opBusca);
                 capitalizeString(opBusca);
                 busca(produto->nome, opBusca);
-                //grava_arquivo
+                
                 break;
-            /*case 6:
-                consultar_departamento(produto);
-                break;*/
+            case 6:
+    
+                break;
             /*case 7:
                 consultar_quantidade_departamento(produto);
                 break;*/
@@ -88,7 +95,7 @@ int main(void)
         }
     } while (opcao != 8);
 
-libera_lista(produto);
-return 0;
-}
+//libera_lista(produto);
+   return 0;
+} 
     
