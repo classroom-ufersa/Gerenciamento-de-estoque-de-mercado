@@ -12,23 +12,30 @@ Este é um projeto de sistema em linguagem `C` para criar e gerenciar um estoque
 - **Adicionar produto**:
 Esta função permite a adição de informações de um produto no sistema. Ela coleta dados como o tipo do produto, nome, preço, data de fabricação, data de validade, departamento e quantidade disponível em estoque.
 
-- Remover produto:
+- **Remover produto**:
+  
 Esta função permite a remoção de um produto do sistema.
 
-- Listar produtos cadastrados:
+- **Listar produtos cadastrados**:
+  
 Esta função exibe uma lista de todos os produtos que foram cadastrados no sistema.
 
-- Editar produtos:
+- **Editar produtos**:
+  
 Esta função permite a modificação das informações de um produto que já existe no sistema. É útil para corrigir dados incorretos ou fazer atualizações com o passar do tempo.
 
-- Buscar produtos:
+- **Buscar produtos**:
+  
 Esta função possibilita a busca de um produto específico com base no seu nome.
 
-- Consultar produtos disponíveis em um dado departamento:
+- **Consultar produtos disponíveis em um dado departamento**:
+  
 Esta função permite consultar os produtos disponíveis em um departamento específico.
 
-- Consultar quantidade de produtos por departamento:
+- **Consultar quantidade de produtos por departamento**:
+  
 Esta função permite consultar a quantidade de produtos disponíveis em um departamento.
 
-- Sair:
+- **Sair**:
+  
 Esta função encerra o programa, permitindo ao usuário sair do sistema quando desejar.
