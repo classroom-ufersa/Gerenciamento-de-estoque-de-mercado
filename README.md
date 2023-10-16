@@ -3,7 +3,7 @@
 - [Desenvolvedores](#Desenvolvedores)
 - [Problemática](#Problemática)
 - [Funcionalidades](#Funcionalidades)
-- [Recursos utilizados](#Recursosutilizados)
+- [Recursos utilizados](#Recursos-utilizados)
 ## Desenvolvedores:
 - [Andrews Ferreira de Paiva Silva](https://github.com/TheFonci)
 - [Michely Vitória Costa Felix](https://github.com/MichelyFelix)
