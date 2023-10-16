@@ -53,18 +53,18 @@ A manipulação de arquivos permite que você leia e escreva dados em arquivos e
 
  A alocação dinâmica de memória permite que mais memoria seja alocada durante a execução do programa. A alocação dinâmica permite que você aloque memória conforme necessário e libere-a quando não for mais usada, contribuindo para um melhor aproveitamento da memória.
 
- - **Ponteiros:**
+- **Ponteiros:**
 
  Os ponteiros são várias que gurdam endereços de memóriade uma outra variavel.Eles são essenciais para conseguir manipular o conteúdo de uma variavel em qualquer parte do programa.  
+ 
+- **Lista encadeada:**
 
- - **Lista encadeada:**
+Listam encadeadas são nós que possuem informações e um ponteiro que aponta pro próximo nó.
 
-   Listam encadeadas são nós que possuem informações e um ponteiro que aponta pro próximo nó.
-
-   - **Tipos estruturados:**
+- **Tipos estruturados:**
   
-     Os tipos estruturados são usados para agrupar diferentes variáveis em uma única entidade, permitindo assim criara um novo tipo de variável.
+Os tipos estruturados são usados para agrupar diferentes variáveis em uma única entidade, permitindo assim criara um novo tipo de variável.
 
-  - **TAD:**
+- **TAD:**
 
-    Tipos abstratos de dados(TADs) é um conceito que encapsula um conjunto de dados e as funções deles. Ele fornece uma interface clara para acessar e manipular os dados, ocultando os detalhes da implementação.
+Tipos abstratos de dados(TADs) é um conceito que encapsula um conjunto de dados e as funções deles. Ele fornece uma interface clara para acessar e manipular os dados, ocultando os detalhes da implementação.
