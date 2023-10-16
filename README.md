@@ -10,6 +10,7 @@
 Este é um projeto de sistema em linguagem `C` para criar e gerenciar um estoque de produtos de um supermercado. O sistema foi desenvolvido com o objetivo de auxiliar na organização, controle e eficiência do estoque de produtos.
 ## Funcionalidades:
 - **Adicionar produto**:
+  
 Esta função permite a adição de informações de um produto no sistema. Ela coleta dados como o tipo do produto, nome, preço, data de fabricação, data de validade, departamento e quantidade disponível em estoque.
 
 - **Remover produto**:
