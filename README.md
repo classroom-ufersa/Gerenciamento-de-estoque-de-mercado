@@ -20,7 +20,7 @@ Esta função permite a remoção de um produto do sistema.
 
 - **Listar produtos cadastrados:**
   
-Esta função exibe uma lista de todos os produtos que foram cadastrados no sistema.
+Esta função exibe uma lista de todos os produtos que foram cadastrados no sistema, como tipo do produto, data de validade e de fabricação, estoque, preço e departamento.
 
 - **Editar produtos:**
   
