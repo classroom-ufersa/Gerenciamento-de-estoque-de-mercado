@@ -43,7 +43,7 @@ Esta função encerra o programa, permitindo ao usuário sair do sistema quando 
 
 ## Recursos utilizados:
 
-Neste projeto empregamos diversos recursos de programação em linguagem `C`, como:
+Neste projeto, fizemos uso de diversos recursos da programação em linguagem `C` para garantir seu funcionamento. Alguns dos recursos incluem:
 
 - **Arquivos:**
 
