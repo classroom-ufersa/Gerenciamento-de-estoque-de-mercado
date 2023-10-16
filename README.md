@@ -1,7 +1,7 @@
 # Gerenciamento de estoque de mercado
 ## Tópicos:
 - [Desenvolvedores](#Desenvolvedores)
-- [Problematica](#Problemática)
+- [Problemática](#Problemática)
 - [Funcionalidades](#Funcionalidades)
 - [Recursos utilizados](#Recursosutilizados)
 ## Desenvolvedores:
