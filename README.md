@@ -4,8 +4,7 @@
 - [Problemática](#Problemática)
 - [Funcionalidades](#Funcionalidades)
 - [Recursos utilizados](#Recursos-utilizados)
-- [Departamento.h](#Departamento.h)
-- [Produto.h](#Produto.h)
+- [TAds](#TADs)
   
 ## Desenvolvedores:
 - [Andrews Ferreira de Paiva Silva](https://github.com/TheFonci)
@@ -74,8 +73,9 @@ Os tipos estruturados são usados para agrupar diferentes variáveis em uma úni
 
 Tipos abstratos de dados(TADs) é um conceito que encapsula um conjunto de dados e as funções deles. Ele fornece uma interface clara para acessar e manipular os dados, ocultando os detalhes da implementação.
 
+## TADs:
 
-## **Departamento.h**
+ **Departamento.h**
 ```#ifndef DEPARTAMENTO_H
 #define DEPARTAMENTO_H
 
@@ -106,7 +106,7 @@ Departamento *add_prod_dep(Departamento *depar, Produto *prod, char nome_depart[
 #endif //DEPARTAMENTO_H
 ```
 
-## **Produto.h**
+ **Produto.h**
 ```#ifndef PRODUTO_H
 #define PRODUTO_H
 
