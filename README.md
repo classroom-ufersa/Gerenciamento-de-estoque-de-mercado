@@ -7,8 +7,9 @@
 ## Desenvolvedores:
 - [Andrews Ferreira de Paiva Silva](https://github.com/TheFonci)
 - [Michely Vitória Costa Felix](https://github.com/MichelyFelix)
-## Problemática:
-Este é um projeto de sistema em linguagem `C` para criar e gerenciar um estoque de produtos de um supermercado. O sistema foi desenvolvido com o objetivo de auxiliar na organização, controle e eficiência do estoque de produtos.
+
+## Problemática
+Este é um projeto de sistema em linguagem `C` para criar e gerenciar um estoque de produtos de um supermercado. O sistema foi desenvolvido com o objetivo de auxiliar na organização, controle e eficiência do estoque de produtos de um supermercado.
 ## Funcionalidades:
 - **Adicionar produto:**
   
@@ -52,15 +53,15 @@ A manipulação de arquivos permite que você leia e escreva dados em arquivos e
 
 - **Alocação dinâmica:**
 
- A alocação dinâmica de memória permite que mais memoria seja alocada durante a execução do programa. A alocação dinâmica permite que você aloque memória conforme necessário e libere-a quando não for mais usada, contribuindo para um melhor aproveitamento da memória.
+ A alocação dinâmica de memória permite que você aloque memória conforme necessário e libere-a quando não for mais necessário durante a execução do programa, contribuindo para uma melhor utilização dos recursos de memória.
 
 - **Ponteiros:**
 
  Os ponteiros são várias que gurdam endereços de memóriade uma outra variavel.Eles são essenciais para conseguir manipular o conteúdo de uma variavel em qualquer parte do programa.  
  
-- **Lista encadeada:**
+- **Lista encadeada simples:**
 
-Listam encadeadas são nós que possuem informações e um ponteiro que aponta pro próximo nó.
+Listas encadeadas simples são nós que possuem informações e um ponteiro que aponta para o próximo nó da lista. Essas estruturas são utilizadas para armazenar informações de forma organizada, possibilitando a implementação de estruturas de dados flexíveis.
 
 - **Tipos estruturados:**
   
