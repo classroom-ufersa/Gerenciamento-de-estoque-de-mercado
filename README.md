@@ -51,15 +51,15 @@ Neste projeto, fizemos uso de diversos recursos da programação em linguagem `C
 
 - **Arquivos:**
 
-A manipulação de arquivos permite que você leia e escreva dados em arquivos externos. Isso é fundamental para a que os dados fiquem salvos apóso fechamento do programa.
+A manipulação de arquivos permite que você leia e escreva dados em arquivos externos. Isso é fundamental para a que os dados fiquem salvos apóso fechamento do programa. No nosso projeto ele cria um arquivo.txt com os dados que foram coletados.
 
 - **Alocação dinâmica:**
 
- A alocação dinâmica de memória permite que você aloque memória conforme necessário e libere-a quando não for mais necessário durante a execução do programa, contribuindo para uma melhor utilização dos recursos de memória.
+ A alocação dinâmica de memória permite que você aloque memória conforme necessário e libere-a quando não for mais necessário durante a execução do programa, contribuindo para uma melhor utilização dos recursos de memória. Nesse projeto a alocação dinamica foi usada para criar lista encadeada simples.
 
 - **Ponteiros:**
 
- Os ponteiros são várias que gurdam endereços de memóriade uma outra variavel.Eles são essenciais para conseguir manipular o conteúdo de uma variavel em qualquer parte do programa.  
+ Os ponteiros são várias que gurdam endereços de memóriade de uma outra variavel.Eles são essenciais para conseguir manipular o conteúdo de uma variavel em qualquer parte do programa. Os ponteiros foram utilizados no projeto para manipular os dados e para navegar a lista.
  
 - **Lista encadeada simples:**
 
@@ -67,7 +67,7 @@ Listas encadeadas simples são nós que possuem informações e um ponteiro que 
 
 - **Tipos estruturados:**
   
-Os tipos estruturados são usados para agrupar diferentes variáveis em uma única entidade, permitindo assim criara um novo tipo de variável.
+Os tipos estruturados são usados para agrupar diferentes variáveis em uma única entidade, permitindo assim criara um novo tipo de variável. Os tipos estruturados foram usados para representar Departamento e Produto.
 
 - **TAD:**
 
