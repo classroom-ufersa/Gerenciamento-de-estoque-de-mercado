@@ -20,9 +20,9 @@ void imprime_produto(Produto* prod);
 Produto* retira(Produto*l, char nome_produto[]);
 //Função para inserir ordenado na lista
 Produto* insere_ordenado(Produto* produto, char* n);
-//Funçã usada para ler o arquiivo
-Produto** ler_arquivo(Produto** produto, int* tam);
-//Função para gravar os dados em um arquivo 
+
+Produto* ler_arquivo(Produto* produto, int* tam);
+
 void grava_arquivo(Produto**produto);
 //Função utilizada para liberar a lista
 void libera_lista(Produto*l);
