@@ -96,9 +96,9 @@ typedef struct produto Produto;
 typedef struct departamento Departamento;
 //Função para criar o departamento 
 Departamento* cria_departamento(char nome[],char porte[]);
-//Função para deixar as letras em maiusculo 
+//Função para deixar as primeira letra maiúscula 
 void capitalizeString(char *str);
-
+//Função para criar o departamento 
 Departamento *criarDepartamento();
 //Função para liberar a memória alocada de departamento 
 void liberarDepartamento(Departamento *departamento);
@@ -134,9 +134,9 @@ void imprime_produto(Produto* prod);
 Produto* retira(Produto*l, char nome_produto[]);
 //Função para inserir ordenado na lista
 Produto* insere_ordenado(Produto* produto, char* n);
-
+//Função de ler o arquivo 
 Produto* ler_arquivo(Produto* produto, int* tam);
-
+//Função para gravar os dados da lista em um arquivo
 void grava_arquivo(Produto**produto);
 //Função utilizada para liberar a lista
 void libera_lista(Produto*l);
