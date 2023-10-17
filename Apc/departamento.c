@@ -132,7 +132,3 @@ void criarArquivo(Departamento *departamento, int n)
     }
 }*/
 
-        printf("Quantidade de Produtos: %d\n", departamento->p->estoque);
-    }
-}*/
-
