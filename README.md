@@ -4,7 +4,7 @@
 - [Problemática](#Problemática)
 - [Funcionalidades](#Funcionalidades)
 - [Recursos utilizados](#Recursos-utilizados)
-- [Departamento.h](#Departamento.h)
+- [Departamento.h](#Departamento-h)
 - [Produto.h](#Produto.h)
   
 ## Desenvolvedores:
