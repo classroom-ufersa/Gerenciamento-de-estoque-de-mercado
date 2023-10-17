@@ -100,7 +100,8 @@ void liberarDepartamento(Departamento *departamento);
 void preencherDepartamento(Departamento *departamento, Produto* prod);
 //Função para adicionar os produtos ao departamento 
 Departamento *add_prod_dep(Departamento *depar, Produto *prod, char nome_depart[]);
-#endif //DEPARTAMENTO_H```
+#endif //DEPARTAMENTO_H
+```
 
 ## **Produto.h**
 ```#ifndef PRODUTO_H
@@ -139,4 +140,5 @@ void limparBuffer(void);
 void editar_produto(Produto* prod);
 
 
-#endif // PRODUTO_H```
+#endif // PRODUTO_H
+```
