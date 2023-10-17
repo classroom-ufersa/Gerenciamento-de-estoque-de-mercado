@@ -73,8 +73,7 @@ Tipos abstratos de dados(TADs) é um conceito que encapsula um conjunto de dados
 
 
 ## **Departamento.h**
-```
-#ifndef DEPARTAMENTO_H
+```#ifndef DEPARTAMENTO_H
 #define DEPARTAMENTO_H
 
 #include"produto.h"
@@ -101,7 +100,6 @@ void liberarDepartamento(Departamento *departamento);
 void preencherDepartamento(Departamento *departamento, Produto* prod);
 //Função para adicionar os produtos ao departamento 
 Departamento *add_prod_dep(Departamento *depar, Produto *prod, char nome_depart[]);
-#endif //DEPARTAMENTO_H
-```
+#endif //DEPARTAMENTO_H```
 
 ## **Produto.h**
