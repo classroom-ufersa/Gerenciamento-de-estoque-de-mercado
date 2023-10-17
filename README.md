@@ -76,7 +76,11 @@ Tipos abstratos de dados(TADs) é um conceito que encapsula um conjunto de dados
 ## TADs:
 
  **Departamento.h**
-```#ifndef DEPARTAMENTO_H
+```
+#ifndef DEPARTAMENTO_H
+#define DEPARTAMENTO_H
+
+#ifndef DEPARTAMENTO_H
 #define DEPARTAMENTO_H
 
 #include"produto.h"
