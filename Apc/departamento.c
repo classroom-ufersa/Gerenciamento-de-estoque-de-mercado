@@ -1,5 +1,8 @@
 #include "../include/produto.h"
 #include "../include/departamento.h"
+#include "../include/produto.h"
+#include "../include/departamento.h"
+
 
 typedef struct departamento
 {
@@ -8,6 +11,7 @@ typedef struct departamento
     char porte[8];
     struct departamento *prox;
 } Departamento;
+
 
 void capitalizeString(char *str)
 {
@@ -22,24 +26,7 @@ void capitalizeString(char *str)
 }
 
 
-Departamento *criarDepartamento(char nome_dep[], char porte[])
-{
-
-Departamento* criaDepartamento(char nome[],char porte[]){
-Departamento* d = (Departamento*)malloc(sizeof(Departamento));
-if(d == NULL){
-    printf("erro ao alocar memoria!\n");
-}
-strcpy(d->nome,nome);
-strcpy(d->porte, porte);
-d->produto = NULL;
-
-return d;
-}
-}
-
-
-Departamento *criarDepartamento(char nome_dep[],char porte[]) {
+Departamento *criarDepartamento(char nome_dep[], char porte[]){
 
     // Aloca dinamicamente a memória para uma estrutura Departamento
     Departamento *novoDepartamento = (Departamento *)malloc(sizeof(Departamento));
@@ -55,11 +42,11 @@ Departamento *criarDepartamento(char nome_dep[],char porte[]) {
     strcpy(novoDepartamento->porte, porte);
     novoDepartamento->produto = NULL;
 
+
     return novoDepartamento;
 }
 
-void liberarDepartamento(Departamento *departamento)
-{
+void liberarDepartamento(Departamento *departamento){
     // Libera a memória alocada para o Departamento
     free(departamento);
 }
@@ -76,27 +63,28 @@ Departamento *busca_departamento(Departamento *departamento, char nomeDep[])
     }
     return NULL;
 }
-void preencherDepartamento(Departamento *departamento, Produto *prod)
-{
+
+/*void preencherDepartamento(Departamento *departamento) {
+    //Produto* produto;
     printf("Nome do departamento: ");
     scanf(" %[^\n]", departamento->nome);
     capitalizeString(departamento->nome);
-
+    limparBuffer();
     printf("Porte: ");
     scanf(" %[^\n]", departamento->porte);
     // capitalizeString(departamento->produto);
-    departamento->produto = prod;
+    //departamento->produto = produto;
     // Loop para verificar as condições corretas
     while (strcmp(departamento->porte, "GRANDE") != 0 &&
            strcmp(departamento->porte, "MEDIO") != 0 &&
            strcmp(departamento->porte, "PEQUENO") != 0)
+           break;
     {
         printf("Informe o porte do produto (GRANDE, MEDIO ou PEQUENO): ");
         scanf(" %[^\n]", departamento->porte);
         capitalizeString(departamento->porte);
-        break;
     }
-}
+}*/
 
 
 Departamento *add_prod_dep(Departamento *depar, Produto *prod, char nome_depart[])
@@ -109,6 +97,7 @@ Departamento *add_prod_dep(Departamento *depar, Produto *prod, char nome_depart[
         aux = aux->prox;
     }
     aux->produto = prod;
+    prod->departamento = aux;
     return depar;
 }
 
@@ -139,6 +128,10 @@ void criarArquivo(Departamento *departamento, int n)
         Departamento *departamento = &departamento[i];
 
         printf("Departamento: %s\n", departamento->p->nome);
+        printf("Quantidade de Produtos: %d\n", departamento->p->estoque);
+    }
+}*/
+
         printf("Quantidade de Produtos: %d\n", departamento->p->estoque);
     }
 }*/
